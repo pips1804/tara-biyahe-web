@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App Advertisement</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Josefin Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .hero {
+        height: 100vh;
+        width: 100%;
+        background-image: url(../img/finalintrocombg.png);
+        background-size: cover;
+        background-position: center;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 45px;
+        padding-left: 8%;
+        padding-right: 8%;
+      }
+      .logo {
+        color: white;
+        font-size: 38px;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+      span {
+        color: #f5d10d;
+      }
+      nav ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 10px 25px;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: x-large;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      nav ul li a:hover {
+        color: #f5d10d;
+        transition: 0.4s;
+      }
+      .btn {
+        background-color: #f5d10d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-size: larger;
+        font-weight: bold;
+        padding: 20px 35px;
+        border-radius: 30px;
+        transition: transform 0.4s;
+      }
+      .btn:hover {
+        transform: scale(1.2);
+      }
+      .content {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%);
+      }
+      h1 {
+        color: white;
+        margin: 20px 0px 20px;
+        font-size: 100px;
+      }
+      h3 {
+        color: white;
+        font-size: 40px;
+        margin-bottom: 70px;
+      }
+      h4 {
+        color: whitesmoke;
+        letter-spacing: 2px;
+        font-size: 35px;
+      }
+
+      .about {
+        width: 100%;
+        padding: 100px 0px;
+        background-color: #191919;
+      }
+      .about img {
+        border-radius: 50px;
+        height: auto;
+        width: 430px;
+      }
+      .about-text {
+        width: 550px;
+      }
+      .main {
+        width: 1130px;
+        max-width: 95%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .about-text h2 {
+        color: white;
+        font-size: 75px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+      }
+      .about-text h3 {
+        color: white;
+        letter-spacing: 2px;
+        font-size: 43px;
+        margin-bottom: 25px;
+        text-transform: capitalize;
+      }
+      .about-text p {
+        color: whitesmoke;
+        letter-spacing: 1px;
+        line-height: 28px;
+        font-size: 20px;
+        margin-bottom: 45px;
+      }
+      .qualities {
+        background: #020202;
+        width: 100%;
+        padding: 100px 0px;
+      }
+      .title h2 {
+        color: white;
+        font-size: 75px;
+        width: 1130px;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+      .card {
+        height: 315px;
+        width: 335px;
+        padding: 20px 35px;
+        background: #191919;
+        border-radius: 20px;
+        margin: 23px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .card i {
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin: 25px 0px;
+        color: #f5d10d;
+      }
+      h5 {
+        color: white;
+        font-size: 23px;
+        margin-bottom: 15px;
+      }
+      .pra p {
+        color: whitesmoke;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom: 25px;
+      }
+      .card .button {
+        background-color: #f5d10d;
+        color: white;
+        text-decoration: none;
+        border: 2px solid transparent;
+        font-weight: bold;
+        padding: 9px 22px;
+        border-radius: 30px;
+        transition: 0.4s;
+      }
+      .card .button:hover {
+        background-color: transparent;
+        border: 2px solid #f5d10d;
+        cursor: pointer;
+      }
+      footer {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        background: #191919;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      footer p:nth-child(1) {
+        font-size: 50px;
+        color: white;
+        margin-bottom: 25px;
+        font-weight: bold;
+      }
+      footer p:nth-child(2) {
+        color: white;
+        font-size: 25px;
+        width: 500px;
+        text-align: center;
+        line-height: 26px;
+      }
+      .social {
+        display: flex;
+      }
+      .social a {
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5d10d;
+        border-radius: 50%;
+        margin: 22px 10px;
+        color: #191919;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .social a:hover {
+        transform: scale(1.3);
+        transition: 0.3s;
+      }
+      .end {
+        position: absolute;
+        color: #f5d10d;
+        bottom: 35px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!----Header section start---->
+    <div class="hero">
+      <nav>
+        <h2 class="logo">Tara, <span>Biyahe!</span></h2>
+        <ul>
+          <li><a href="#section-about">About App</a></li>
+          <li><a href="#section-qualities">Features</a></li>
+          <li><a href="#section-footer">Contact Us</a></li>
+        </ul>
+        <a href="https://play.google.com/store/apps" class="btn">Download</a>
+      </nav>
+
+      <div class="content">
+        <h4>Hello, this is</h4>
+        <h1>Tara, <span>Biyahe!</span></h1>
+        <h3>The answer to commuter's problem.</h3>
+      </div>
+    </div>
+
+    <!----About section start---->
+    <section class="about" id="section-about">
+      <div class="main">
+        <img src="img/ic1.png" />
+        <div class="about-text">
+          <h2>About Our App</h2>
+          <h3>Tara, <span>Biyahe!</span></h3>
+          <p>
+            <strong>Tara,<span> Byahe!</span></strong> was made on December
+            2022. The purpose of this app is to help commuters, especially for
+            workers and students who commute after a very tiring day. This app
+            is the best for them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-----Features section start------>
+    <div class="qualities" id="section-qualities">
+      <div class="title">
+        <h2>App Features</h2>
+      </div>
+
+      <div class="box">
+        <div class="card">
+          <i class="fas fa-universal-access"></i>
+          <h5>Profile Customization</h5>
+          <div class="pra">
+            <p>
+              Allow users to create personal profiles and customize their
+              settings base on their preferences.
+            </p>
+
+            <p style="text-align: center"></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fa fa-adjust"></i>
+          <h5>Simplicity</h5>
+          <div class="pra">
+            <p>
+              The design is user-friendly and intuitive. It also has a modern
+              look and feel that will appeal to a wide range of users.
+            </p>
+
+            <p style="text-align: center"></p>
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fa fa-database" aria-hidden="true"></i>
+          <h5>Reporting & Analytics</h5>
+          <div class="pra">
+            <p>
+              Track user activity and generate reports to help administrators
+              improve the app.
+            </p>
+
+            <p style="text-align: center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------Footer section start--------->
+    <footer id="section-footer">
+      <p>Tara, <span>Biyahe!</span></p>
+      <p>For more questions please contact us below:</p>
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=100082191482614"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="end">Copyright by Group 4</p>
+    </footer>
+  </body>
+</html>
